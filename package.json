@@ -1,0 +1,70 @@
+{
+  "name": "youtube-music-desktop",
+  "version": "0.4.0",
+  "description": "unofficial YouTube Music desktop for friends",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "build:mac": "node build.js mac",
+    "build:win": "node build.js win",
+    "build:linux": "node build.js linux",
+    "build": "node build.js all",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/ExBleaK/YouTube-For-Friends",
+  "keywords": [
+    "YouTube",
+    "music",
+    "for",
+    "friends",
+    "desktop"
+  ],
+  "author": "BleaK",
+  "license": "CC BY-NC 3.0",
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "4.0.0"
+  },
+  "dependencies": {
+    "discord-rpc": "github:devsnek/discord-rpc",
+    "electron-compile": "^6.4.4",
+    "electron-hotkey": "0.0.1-alpha.1",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "youtube_music_desktop"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "youtubemusicdesktop"
+      }
+    }
+  }
+}
