@@ -10,7 +10,7 @@ const sel = matrix[process.argv[2]];
 
 const opt = {
     name: 'YouTube-Music-Desktop',
-    appCopyright: 'RosieCode95',
+    appCopyright: 'BleaK',
     dir: '.',
     asar: true,
     overwrite: true,
